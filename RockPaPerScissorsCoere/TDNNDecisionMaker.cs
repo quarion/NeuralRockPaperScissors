@@ -17,7 +17,7 @@ namespace RockPaperScissorsCore
             return myLastDecision;
         }
 
-        RPSNetwork network = new RPSNetwork(5);
+        RPSNetwork network = new RPSNetwork( Settigns.samplesHistoryLength );
         Decision myLastDecision;
 
         public void rememberDecision(Decision opponentDecision)

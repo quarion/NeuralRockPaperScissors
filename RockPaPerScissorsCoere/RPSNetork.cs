@@ -29,9 +29,9 @@ namespace RockPaperScissorsCore
             }
         }
 
-        double learningRate = 1.0;
-        double learnigEnstinguishRate = 0.05;
-        double minLearningRate = 5.9;
+        double learningRate = Settigns.learningRate;
+        double learnigEnstinguishRate = Settigns.learnigEnstinguishRate;
+        double minLearningRate = Settigns.minLearningRate;
 
         /// <summary>
         /// Zwraca decyzję na podstawie pobudzeń neuronó wyjściowych
