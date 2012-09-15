@@ -1,7 +1,7 @@
 ﻿<Window x:Class="NeuralRockPaperScisors.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" KeyDown="Window_KeyDown_1">
     <Grid>
         <Label Content="Wynik" HorizontalAlignment="Center" Margin="235,141,231,0" VerticalAlignment="Top"/>
         <Label x:Name="ScoreLabel" Content="0:0&#xD;&#xA;" Margin="207,172,204,0" VerticalAlignment="Top" Width="98" Height="29" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>

@@ -16,16 +16,16 @@ namespace RockPaperScissorsCore
         /// <summary>
         /// Współczynnik szybkosci uczenia
         /// </summary>
-        public static double learningRate = 1.0;
+        public static double learningRate = 5.0;
 
         /// <summary>
         /// Współczynnik zmniejszenia szybkosci uczenia w czasie
         /// </summary>
-        public static double learnigEnstinguishRate = 0.0;
+        public static double learnigEnstinguishRate = 0.1;
 
         /// <summary>
         /// Minimalna szybkość uczenia
         /// </summary>
-        public static double minLearningRate = 1.0;
+        public static double minLearningRate = 5.0;
     }
 }

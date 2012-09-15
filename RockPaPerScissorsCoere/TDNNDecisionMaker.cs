@@ -22,8 +22,8 @@ namespace RockPaperScissorsCore
 
         public void rememberDecision(Decision opponentDecision)
         {
-            network.updateInputs(myLastDecision, opponentDecision);
             network.updateWeights(myLastDecision, opponentDecision);
+            network.updateInputs(myLastDecision, opponentDecision);
         }
     }
 }

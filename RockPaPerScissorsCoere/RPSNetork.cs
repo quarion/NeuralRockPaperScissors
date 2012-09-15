@@ -18,7 +18,7 @@ namespace RockPaperScissorsCore
         {
             Random rnd = new Random();
             //inicjalizujemy wagi, standardowo
-            resetWeights(10.0);
+            resetWeights(5.0);
 
             //generujemy pierwotne wejscie, losowo
             for (int i = 0; i < inputs.Length; i += 3)
@@ -53,13 +53,19 @@ namespace RockPaperScissorsCore
         public void updateWeights(Decision AIDecision, Decision opponentDecision)
         {
             Decision expectedDecision = opponentDecision.GetCounter(); //decyzja, ktora powinnismy podjac
+
+            if (expectedDecision == AIDecision)
+                return; //i tak sie wagi nie zmienia, wiec konczymy funkcje od razu
+
             double[] desiredOutput = expectedDecision.ToNeural();
             double[] currentOutput = AIDecision.ToNeural();
 
             for (int i = 0; i < outputs.Length; ++i)
             {
+                double diff = (desiredOutput[i] - currentOutput[i]) * learningRate; //obliczamy poprawke
+                
                 for (int j = 0; j < inputs.Length; ++j)
-                    weights[i, j] += (desiredOutput[i] - currentOutput[i]) * inputs[j] * learningRate;
+                    weights[i, j] +=  diff * inputs[j]; //wprowadzamy poprawke do wag sieci
             }
 
             if (minLearningRate < learningRate - learnigEnstinguishRate)
@@ -74,19 +80,14 @@ namespace RockPaperScissorsCore
         /// <param name="opponentDecision">decyzja przeciwnika</param>
         public void updateInputs(Decision AIDecision, Decision opponentDecision )
         {
-            /*for (int j = 6; j < inputs.Length; ++j)
-                inputs[j] = inputs[j - 6]; //przesuwamy wszystko, co zapamietalismy
-            
-            //zapamietujemy nowe
-            for (int j = 0; j < 3; ++j)
-            {
-                inputs[j] = AIDecision.ToNeural()[j];
-                inputs[j + 3] = opponentDecision.ToNeural()[j];
-            }*/
 
+            //przesuwamy wejscia w prawo
+            double[] oldInputs = new double[inputs.Length];
+            inputs.CopyTo(oldInputs, 0);
             for (int j = 3; j < inputs.Length; ++j)
-                inputs[j] = inputs[j - 3];
+                inputs[j] = oldInputs[j - 3];
 
+            //dopisujemy nowe wejscia
             for (int j = 0; j < 3; ++j)
             {
                 inputs[j] = AIDecision.ToNeural()[j];

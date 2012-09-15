@@ -51,10 +51,23 @@ namespace NeuralRockPaperScisors
             scoreRound(Decision.Rock);
         }
 
+        //scissors
         private void ScissorsButton_Click(object sender, RoutedEventArgs e)
         {
             scoreRound(Decision.Scissor);
         }
+
+        //obsluga klawiatury
+        private void Window_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.A)
+                RockButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            else if (e.Key == Key.S)
+                PaperButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            else if (e.Key == Key.D)
+                ScissorsButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        }
+
 
         public void scoreRound(Decision playerDecision)
         {
@@ -91,6 +104,7 @@ namespace NeuralRockPaperScisors
         {
             scoreRound(randomDecisionMaker.getNextDecision());
         }
+
 
     }
 }
