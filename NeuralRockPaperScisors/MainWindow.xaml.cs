@@ -27,7 +27,6 @@ namespace NeuralRockPaperScisors
             InitializeComponent();
             //decisionMaker = new RandomDecisionMaker();
             decisionMaker = new TDNNDecisionMaker();
-            randomTimer.Tick += randomTimerTick;
             randomTimer.Interval = new TimeSpan(2000000);
         }
 
@@ -38,6 +37,8 @@ namespace NeuralRockPaperScisors
 
         int playerScore = 0;
         int opponentScore = 0;
+
+        int patternIndex = 0;
 
         //paper
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -91,12 +92,35 @@ namespace NeuralRockPaperScisors
             if (randomTimer.IsEnabled)
             {
                 randomTimer.Stop();
-                AutoButton.Content = "Auto";
+                patternButton.Content = "Wzorzec";
+                AutoButton.Content = "Losowo";
             }
             else
             {
                 randomTimer.Start();
+                randomTimer.Tick -= patternTimerTick;
+                randomTimer.Tick += randomTimerTick;
                 AutoButton.Content = "Stop";
+                patternButton.Content = "Stop";
+            }
+        }
+
+        private void patternButton_Click(object sender, RoutedEventArgs e)
+        {
+            patternIndex = 0;
+            if (randomTimer.IsEnabled)
+            {
+                randomTimer.Stop();
+                patternButton.Content = "Wzorzec";
+                AutoButton.Content = "Losowo";
+            }
+            else
+            {
+                randomTimer.Start();
+                randomTimer.Tick += patternTimerTick;
+                randomTimer.Tick -= randomTimerTick;
+                AutoButton.Content = "Stop";
+                patternButton.Content = "Stop";
             }
         }
 
@@ -105,6 +129,12 @@ namespace NeuralRockPaperScisors
             scoreRound(randomDecisionMaker.getNextDecision());
         }
 
+        private void patternTimerTick(object sender, EventArgs e)
+        {
+            Decision[] pattern = new Decision[7] { Decision.Rock, Decision.Paper, Decision.Rock, Decision.Scissor, Decision.Paper, Decision.Paper, Decision.Scissor };
+            scoreRound(pattern[patternIndex]);
+            patternIndex = (patternIndex + 1) % pattern.Length;
+        }
 
     }
 }

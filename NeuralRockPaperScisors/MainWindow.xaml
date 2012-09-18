@@ -12,7 +12,8 @@
 
         </Canvas>
         <TextBox x:Name="HistoryTextBox" HorizontalAlignment="Left" Height="63" Margin="142,19,0,0" TextWrapping="Wrap" Text="Historia" VerticalAlignment="Top" Width="235"/>
-        <Button x:Name="AutoButton" Content="Auto" HorizontalAlignment="Left" Margin="408,258,0,0" VerticalAlignment="Top" Width="75" Click="AutoButton_Click"/>
+        <Button x:Name="AutoButton" Content="Losowo" HorizontalAlignment="Left" Margin="408,258,0,0" VerticalAlignment="Top" Width="75" Click="AutoButton_Click"/>
+        <Button x:Name="patternButton" Content="Wzorzec" HorizontalAlignment="Left" Margin="315,258,0,0" VerticalAlignment="Top" Width="75" Click="patternButton_Click"/>
 
     </Grid>
 </Window>

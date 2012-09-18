@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RockPaperScissorsCore.OneLayerNetwork" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAQBgAAAAAAAQAAAA=</HashCode>
+      <FileName>OneLayerNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsCore.RandomDecisionMaker" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAA=</HashCode>
+      <FileName>RandomDecisionMaker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RockPaperScissorsCore.RPSExtensions" Collapsed="true">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABQAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>RPSExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsCore.RPSNetwork" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABAA=</HashCode>
+      <FileName>RPSNetork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsCore.Settigns" Collapsed="true">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Settigns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsCore.TDNNDecisionMaker" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAABAAAAAABAAA=</HashCode>
+      <FileName>TDNNDecisionMaker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.74" />
+  </Class>
+  <Interface Name="RockPaperScissorsCore.IDecisionMaker" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAA=</HashCode>
+      <FileName>IDecisionMaker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RockPaperScissorsCore.Decision" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDecisionMaker.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
