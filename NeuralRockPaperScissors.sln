@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFInterface", "NeuralRockPaperScisors\WPFInterface.csproj", "{62B20969-9DA0-4933-AC8B-78C18C0991D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFInterface", "NeuralRockPaperScissors\WPFInterface.csproj", "{62B20969-9DA0-4933-AC8B-78C18C0991D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissorsCore", "RockPaPerScissorsCoere\RockPaperScissorsCore.csproj", "{33685346-7EE7-4DBB-A6CE-CF03991D18F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissorsCore", "RockPaperScissorsCore\RockPaperScissorsCore.csproj", "{33685346-7EE7-4DBB-A6CE-CF03991D18F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

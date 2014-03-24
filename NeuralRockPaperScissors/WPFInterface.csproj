@@ -94,7 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RockPaPerScissorsCoere\RockPaperScissorsCore.csproj">
+    <ProjectReference Include="..\RockPaperScissorsCore\RockPaperScissorsCore.csproj">
       <Project>{33685346-7ee7-4dbb-a6ce-cf03991d18f9}</Project>
       <Name>RockPaperScissorsCore</Name>
     </ProjectReference>
