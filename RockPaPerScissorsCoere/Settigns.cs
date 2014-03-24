@@ -21,7 +21,7 @@ namespace RockPaperScissorsCore
         /// <summary>
         /// Współczynnik zmniejszenia szybkosci uczenia w czasie
         /// </summary>
-        public static double learnigEnstinguishRate = 0.1;
+        public static double learnigExtinguishRate = 0.1;
 
         /// <summary>
         /// Minimalna szybkość uczenia

@@ -9,11 +9,11 @@ namespace RockPaperScissorsCore
     class RPSNetwork:OneLayerNetwork
     {
         /// <summary>
-        /// Klasa realizująca sieć przewidującą kolejne ruchy w grze, na podstawie jednowarstwowej sieci meuronowej
+        /// Klasa realizująca sieć przewidującą kolejne ruchy w grze, na podstawie jednowarstwowej sieci neuronowej
         /// Argumentem jest ilość zapamietanych ruchów. Neurony wejsciowe są pobudzane zapamiętanymi ruchami z przeszłosci - zarówno własnymi, jak i przeciwnika.
         /// Potrzebna ilość neuronów wejściowych wynosi: (ilość zapamietanych ruchów) * (ilość graczy) * (ilość możliwych ruchów) = (ilość zapamietanych ruchów) * 2 * 3
         /// </summary>
-        /// <param name="memoryLength">ilość zapamietanych ruchó</param>
+        /// <param name="memoryLength">ilość zapamietanych ruchów</param>
         public RPSNetwork(int memoryLength):base(memoryLength * 6, 3)
         {
             Random rnd = new Random();
@@ -30,11 +30,11 @@ namespace RockPaperScissorsCore
         }
 
         double learningRate = Settigns.learningRate;
-        double learnigEnstinguishRate = Settigns.learnigEnstinguishRate;
+        double learnigEnstinguishRate = Settigns.learnigExtinguishRate;
         double minLearningRate = Settigns.minLearningRate;
 
         /// <summary>
-        /// Zwraca decyzję na podstawie pobudzeń neuronó wyjściowych
+        /// Zwraca decyzję na podstawie pobudzeń neuronów wyjściowych
         /// </summary>
         /// <returns></returns>
         public Decision getDecision()
@@ -80,7 +80,6 @@ namespace RockPaperScissorsCore
         /// <param name="opponentDecision">decyzja przeciwnika</param>
         public void updateInputs(Decision AIDecision, Decision opponentDecision )
         {
-
             //przesuwamy wejscia w prawo
             double[] oldInputs = new double[inputs.Length];
             inputs.CopyTo(oldInputs, 0);
